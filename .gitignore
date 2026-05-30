@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+env/
+.env
+
+# Tensorboard Logs
+logs/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code / Editor
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# (Opsional) Abaikan model & data jika ukurannya terlalu besar
+# *.h5
+# *.keras
+# *.csv
+# *.pkl
