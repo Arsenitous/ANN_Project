@@ -20,7 +20,23 @@ with open("scaler.pkl", "rb") as file:
 
 
 ## streamlit app
-st.title("Customer Churn Prediction")
+st.title("Customer Churn Prediction 🏦")
+
+st.markdown(
+    """
+This application uses an **Artificial Neural Network (ANN)** to predict the probability of a bank customer churning (leaving the bank).
+
+### 📊 About the Data
+The deep learning model was trained on historical bank customer data, which includes:
+- **Demographics:** Country of origin, Gender, and Age.
+- **Financial Info:** Credit Score, Account Balance, and Estimated Salary.
+- **Activity Profile:** Tenure (years with the bank), Number of Products held, Credit Card ownership, and Active Member status.
+
+### ⚙️ How to Use
+Simply adjust the customer profile parameters below. The model will instantly calculate the probability of the customer exiting the bank!
+---
+"""
+)
 
 # User input
 geography = st.selectbox("Geography", ohp_geo.categories_[0])
@@ -30,7 +46,7 @@ balance = st.number_input("Balance")
 credit_score = st.number_input("Credit Score")
 estimated_salary = st.number_input("Estimated Salary")
 tenure = st.slider("Tenure", 0, 10)
-num_of_products = st.slider("Number of Pr   oducts", 1, 4)
+num_of_products = st.slider("Number of Products", 1, 4)
 has_cr_card = st.selectbox("Has Credit Card", [0, 1])
 is_active_member = st.selectbox("Is Active Member", [0, 1])
 
