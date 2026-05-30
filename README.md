@@ -1,15 +1,18 @@
-# 🏦 Customer Churn Prediction (Deep Learning ANN)
+# 🏦 Customer Churn & 💵 Salary Prediction (Deep Learning ANN)
 
-Welcome to the Customer Churn Prediction project! This application utilizes an Artificial Neural Network (ANN) to predict whether a bank customer is likely to leave (churn) or stay based on their profile.
+Welcome to the Bank Customer Prediction project! This project contains two Artificial Neural Network (ANN) models:
+1. **Classification Model**: Predicts whether a bank customer is likely to leave (churn) or stay.
+2. **Regression Model**: Predicts the estimated salary of a customer based on their profile.
 
-🚀 **[Try the Live Web App Here!](https://annproject-5zctv7sjdshcazkdec6aut.streamlit.app/)**
+🚀 **[Try the Churn Prediction App Here!](https://annproject-5zctv7sjdshcazkdec6aut.streamlit.app/)**
+🚀 **[Try the Salary Prediction App Here!](https://annproject-awkjbvappya2uvqmmidpnb.streamlit.app/)**
 
 ---
 
 ## 📖 Overview
-Customer churn is a critical metric for financial institutions. This deep learning model analyzes various customer features—such as Geography, Gender, Age, Credit Score, and Account Balance—to accurately calculate the probability of a customer exiting the bank.
+Customer analytics are critical for financial institutions. These deep learning models analyze various customer features—such as Geography, Gender, Age, Credit Score, and Account Balance—to accurately predict customer churn and estimate salaries.
 
-The interactive web interface is built using **Streamlit**, providing a user-friendly way to input customer details and instantly receive a prediction.
+The interactive web interfaces are built using **Streamlit**, providing a user-friendly way to input customer details and instantly receive predictions.
 
 ## 🛠️ Technologies Used
 - **Deep Learning Framework:** TensorFlow / Keras
@@ -41,17 +44,21 @@ If you want to run or modify this project on your own machine, follow these step
    pip install -r requirements.txt
    ```
 
-4. **Run the Streamlit App:**
+4. **Run the Streamlit Apps:**
    ```bash
+   # Run Churn Prediction App
    streamlit run app.py
+   
+   # Run Salary Prediction App
+   streamlit run streamlit_regression.py
    ```
 
 5. **View the App:**
    Open your browser and navigate to `http://localhost:8501`.
 
 ## 📊 Model Training
-If you want to see how the model was built and trained, check out the `experiments.ipynb` notebook. It contains the complete workflow:
-- Data Preprocessing & Scaling
-- Feature Encoding
-- ANN Architecture Definition
-- Training loop with TensorBoard integration
+If you want to see how the models were built and trained, check out the following notebooks:
+- `experiments.ipynb`: Contains the workflow for the Churn Classification model.
+- `salaryregression.ipynb`: Contains the workflow for the Salary Regression model.
+
+Both include Data Preprocessing, Feature Encoding, ANN Architecture Definition, and Training loops.
