@@ -1,0 +1,169 @@
+╔══════════════════════════════════════════════════════════╗
+║  PROJECT 1 — Customer Churn Prediction 🏦               ║
+║  (ANN · Deep Learning)                                  ║
+╚══════════════════════════════════════════════════════════╝
+
+── SECTION 1: Background & Problem ──────────────────────
+Q1. Apa masalah nyata yang ingin diselesaikan proyek ini?
+    (Contoh: bank rugi karena banyak nasabah kabur, dll.)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+Q2. Kenapa masalah ini penting untuk diselesaikan?
+    (Dampaknya apa kalau dibiarkan?)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 2: Dataset & EDA ─────────────────────────────
+Q3. Dari mana kamu dapat dataset-nya?
+    (Kaggle link / nama dataset / sumber lain)
+
+    JAWABAN:
+    ________________________________________________________
+
+Q4. Berapa jumlah baris & kolom/fitur dataset-nya?
+
+    JAWABAN:  Baris: ____________  Kolom: ____________
+
+Q5. Fitur apa saja yang ada di dataset?
+    (Sebutkan beberapa yang paling penting)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q6. Temuan menarik apa yang kamu temukan saat eksplorasi data (EDA)?
+    (Contoh: ada kolom yang banyak missing value, distribusi tidak
+    seimbang, korelasi antar fitur, outlier, dll.)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 3: Methodology & Modeling ───────────────────
+Q7. Algoritma/model apa yang kamu pakai? Kenapa pilih itu?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q8. Bagaimana struktur model-nya?
+    (Berapa layer? Fungsi aktivasi apa? Optimizer apa?)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q9. Berapa hasil akurasi / metric evaluasi model-mu?
+    (Accuracy, F1-Score, AUC-ROC, MAE, RMSE, R², dll.)
+
+    JAWABAN:
+    ________________________________________________________
+
+Q10. Apakah ada tantangan teknis yang kamu hadapi?
+     (Contoh: overfitting, data imbalance, dll. dan cara mengatasinya)
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+── SECTION 4: Impact & Insights ────────────────────────
+Q11. Apa output/hasil yang ditampilkan di aplikasi Streamlit-mu?
+     (Apa yang bisa dilakukan user di app?)
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+Q12. Apa insight atau kesimpulan paling penting dari proyek ini?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+
+╔══════════════════════════════════════════════════════════╗
+║  PROJECT 2 — Customer Salary Prediction 💵              ║
+║  (ANN · Regression)                                     ║
+╚══════════════════════════════════════════════════════════╝
+
+── SECTION 1: Background & Problem ──────────────────────
+Q1. Apa masalah nyata yang ingin diselesaikan proyek ini?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+Q2. Kenapa masalah ini penting untuk diselesaikan?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 2: Dataset & EDA ─────────────────────────────
+Q3. Dari mana kamu dapat dataset-nya?
+
+    JAWABAN:
+    ________________________________________________________
+
+Q4. Berapa jumlah baris & kolom/fitur dataset-nya?
+
+    JAWABAN:  Baris: ____________  Kolom: ____________
+
+Q5. Fitur apa saja yang ada di dataset?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q6. Temuan menarik apa yang kamu temukan saat EDA?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 3: Methodology & Modeling ───────────────────
+Q7. Algoritma/model apa yang kamu pakai? Kenapa pilih itu?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q8. Bagaimana struktur model-nya?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q9. Berapa hasil metric evaluasi model-mu?
+    (MAE, RMSE, R², dll. — karena ini regression)
+
+    JAWABAN:
+    ________________________________________________________
+
+Q10. Apakah ada tantangan teknis yang kamu hadapi?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+── SECTION 4: Impact & Insights ────────────────────────
+Q11. Apa output/hasil yang ditampilkan di aplikasi Streamlit-mu?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+Q12. Apa insight atau kesimpulan paling penting dari proyek ini?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________

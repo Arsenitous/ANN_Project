@@ -1,0 +1,106 @@
+import pandas as pd  
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+import pickle
+---
+## Read the data
+df = pd.read_csv("Churn_Modelling.csv")
+df.head()
+---
+## Drop irrelevant columns
+df = df.drop(["RowNumber", "CustomerId", "Surname"], axis=1)
+df.head()
+---
+## Encode categorical features
+label_encoder = LabelEncoder()
+df['Gender'] = label_encoder.fit_transform(df['Gender'])
+df.head()
+---
+## One Hot Encoding to Geography
+from sklearn.preprocessing import OneHotEncoder
+ohp = OneHotEncoder()
+geo_encoder = ohp.fit_transform(df[['Geography']])
+geo_encoder
+---
+geo_encoder_features = ohp.get_feature_names_out(['Geography'])
+geo_encoder_features
+---
+geo_encoder_df = pd.DataFrame(geo_encoder.toarray(),columns=geo_encoder_features )
+geo_encoder_df
+---
+## combine all columns OHP with the original dataframe
+data = pd.concat([df.drop('Geography', axis=1), geo_encoder_df], axis=1)
+data.head()
+---
+## Save the encoder and scaler
+with open ('label_encoder_gender.pkl', 'wb') as file:
+    pickle.dump(label_encoder, file)
+
+with open ('ohp_geo.pkl', 'wb') as file:
+    pickle.dump(ohp, file)
+---
+data.head()
+---
+X = data.drop(columns='Exited', axis=1)
+y = data['Exited']
+---
+## Train test Split
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2, random_state=42)
+---
+## Apply StandarScaler
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+---
+with open ('scaler.pkl', 'wb') as file:
+    pickle.dump(scaler, file)
+---
+import tensorflow as tf  
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense  
+from tensorflow.keras.callbacks import EarlyStopping, TensorBoard
+import datetime
+---
+## Build Our ANN Model
+model=Sequential([
+    Dense(64,activation='relu',input_shape=(X_train.shape[1],)), ## HL1 Connected wwith input layer
+    Dense(32,activation='relu'), ## HL2
+    Dense(1,activation='sigmoid')  ## output layer
+]
+
+)
+---
+model.summary()
+---
+opt = tf.keras.optimizers.Adam(learning_rate=0.01)
+loss = tf.keras.losses.BinaryCrossentropy()
+---
+## Compile the model
+model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])
+---
+## Set up the Tensorboard
+# log_dir="logs/fit" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+log_dir="logs/fit"
+tensorflow_callback=TensorBoard(log_dir=log_dir,histogram_freq=1)
+---
+## Set up EarlyStopping
+early_stopping_callback=EarlyStopping(monitor='val_loss',patience=10,restore_best_weights=True)
+---
+### Train the model
+history=model.fit(
+    X_train,y_train,validation_data=(X_test,y_test),epochs=100,
+    callbacks=[tensorflow_callback,early_stopping_callback]
+)
+---
+model.save('model.h5')
+---
+# 1. Load extension-nya dulu (wajib sekali setiap kali notebook baru dibuka)
+%load_ext tensorboard
+---
+# 2. Baru panggil TensorBoard-nya
+%tensorboard --logdir logs/fit
+
+## Cek di http://localhost:6006/
+---
+
+---
